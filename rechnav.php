@@ -4,14 +4,7 @@
 	<?php
 	if (isset($_GET['query']))
 	{
-		try
-		{
-			$bdd = new PDO('mysql:host=localhost;dbname=ProjetWeb;charset=utf8', 'root', '',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-		}
-		catch (Exception $e)
-		{
-			die('Erreur : ' . $e->getMessage());
-		}
+		include ('connexionBDD.php');
 		
 		$answer = $bdd->prepare('SELECT DISTINCT * FROM project,taxon 
 								WHERE project.NCBI_TAXON_ID=taxon.NCBI_TAXON_ID 

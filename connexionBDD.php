@@ -1,7 +1,10 @@
 <?php
 try
-{
-	$bdd = new PDO(mysql:host=localhost;dbname=ProjetWeb;charset=utf8', 'root', '');
+{	
+	/* 	BDD_Sylvain : " $bdd = new PDO('mysql:host=localhost;dbname=sylvain;charset=utf8', 'root', '');"
+		BDD_Eric et Amine : 
+	*/
+	$bdd = new PDO('mysql:host=localhost;dbname=sylvain;charset=utf8', 'root', '');
 }
 catch (Exception $e)
 {

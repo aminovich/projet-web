@@ -4,26 +4,19 @@
 
 <section>
 	<?php
-	if (isset($_POST['query']))
+	if (isset($_GET['query']))
 	{
-		try
-		{
-			$bdd = new PDO('mysql:host=localhost;dbname=ProjetWeb;charset=utf8', 'root', '',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-		}
-		catch (Exception $e)
-		{
-			die('Erreur : ' . $e->getMessage());
-		}
+		include ('connexionBDD.php');
 		
 		$answer = $bdd->prepare('SELECT DISTINCT * FROM project WHERE GOLDSTAMP LIKE ?');
-		$answer->execute(array("%".$_POST['query']."%"));
+		$answer->execute(array("%".$_GET['query']."%"));
 		$answer2 = $bdd->prepare('SELECT COUNT(DISTINCT GOLDSTAMP) FROM project WHERE GOLDSTAMP LIKE ?');
-		$answer2->execute(array("%".$_POST['query']."%"));
+		$answer2->execute(array("%".$_GET['query']."%"));
 		$count = $answer2->fetch();
 	?>
 	<div id="center">
 		<h1>Results</h1>
-		<h4>Query:<?php echo '"'.$_POST['query'].'"<br>'.$count["COUNT(DISTINCT GOLDSTAMP)"].' results';?></h4>
+		<h4>Query:<?php echo '"'.$_GET['query'].'"<br>'.$count["COUNT(DISTINCT GOLDSTAMP)"].' results';?></h4>
 		<table class="tab">
 			<tr>
 				<th class="col">#</th>

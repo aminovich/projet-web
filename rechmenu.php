@@ -6,15 +6,7 @@
 	<?php
 		if (isset($_GET['col']))
 		{
-			try
-			{
-				$bdd = new PDO('mysql:host=localhost;dbname=ProjetWeb;charset=utf8', 'root', '');
-			}
-			catch (Exception $e)
-			{
-				die('Erreur : ' . $e->getMessage());
-			}
-			
+			include ('connexionBDD.php');
 			/*ORDONNER LES RESULTATS DES REQUETES*/
 			if($_GET['col']=='GOLDSTAMP')
 			{
@@ -156,18 +148,18 @@
 					while ($data = $answer->fetch())
 					{
 			?>
-						<tr><td><ul><li><a href="http://localhost/tests/rechnav.php?query=<?php echo $data[$_GET['col']];?>" ><?php echo $data[$_GET['col']];
+						<tr><td><ul><li><a href="rechnav.php?query=<?php echo $data[$_GET['col']];?>" ><?php echo $data[$_GET['col']];
 											$data = $answer->fetch();
 											if($data){
 										?></a></li></ul></td>
 						
-						<td><ul><li><a href="http://localhost/tests/rechnav.php?query=<?php echo $data[$_GET['col']];?>" ><?php echo $data[$_GET['col']];
+						<td><ul><li><a href="rechnav.php?query=<?php echo $data[$_GET['col']];?>" ><?php echo $data[$_GET['col']];
 											}
 											$data = $answer->fetch();
 											if($data){
 									?></a></li></ul></td>
 											
-						<td><ul><li><a href="http://localhost/tests/rechnav.php?query=<?php echo $data[$_GET['col']];?>" ><?php echo $data[$_GET['col']];
+						<td><ul><li><a href="rechnav.php?query=<?php echo $data[$_GET['col']];?>" ><?php echo $data[$_GET['col']];
 											}
 									?></a></li></ul></td></tr>
 			<?php

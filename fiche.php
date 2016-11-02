@@ -6,14 +6,7 @@
 	<?php
 		if (isset($_GET['Gp']))
 		{
-			try
-			{
-				$bdd = new PDO('mysql:host=localhost;dbname=ProjetWeb;charset=utf8', 'root', '');
-			}
-			catch (Exception $e)
-			{
-				die('Erreur : ' . $e->getMessage());
-			}
+			include ('connexionBDD.php');
 			$answer = $bdd->prepare('SELECT DISTINCT * FROM project,taxon WHERE GOLDSTAMP=? AND project.NCBI_TAXON_ID=taxon.NCBI_TAXON_ID');
 			$answer->execute(array($_GET['Gp']));
 	?>
