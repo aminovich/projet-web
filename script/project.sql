@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Mer 19 Octobre 2016 à 11:43
+-- Généré le :  Mer 02 Novembre 2016 à 11:31
 -- Version du serveur :  5.6.24
 -- Version de PHP :  5.6.8
 
@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `project` (
   `SEQUENCING_CENTERS` varchar(255) DEFAULT NULL,
   `FUNDING` varchar(255) DEFAULT NULL,
   `CONTACT_NAME` varchar(255) DEFAULT NULL,
-  `NCBI_BIOPROJECT ID` int(9) DEFAULT NULL,
+  `NCBI_BIOPROJECT_ID` int(9) DEFAULT NULL,
   `NCBI_PROJECT_NAME` varchar(255) DEFAULT NULL,
   `NCBI_TAXON_ID` int(9) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -45,48 +45,7 @@ CREATE TABLE IF NOT EXISTS `project` (
 -- Contenu de la table `project`
 --
 
-INSERT INTO `project` (`GOLDSTAMP`, `LEGACY_GOLDSTAMP`, `PROJECT_NAME`, `PROJECT_TYPE`, `PROJECT_STATUS`, `SEQUENCING_STATUS`, `SEQUENCING_CENTERS`, `FUNDING`, `CONTACT_NAME`, `NCBI_BIOPROJECT ID`, `NCBI_PROJECT_NAME`, `NCBI_TAXON_ID`) VALUES
-('Gp0004774', 'Gc01034', 'Thermococcus gammatolerans EJ3', 'Whole Genome Sequencing', 'Complete and Published', 'Complete', 'CEA Genoscope', 'None', 'Nikos Kyrpides', 33671, 'Thermococcus gammatolerans EJ3', 593117),
-('Gp0004774', 'Gc01034', 'Thermococcus gammatolerans EJ3', 'Whole Genome Sequencing', 'Complete and Published', 'Complete', 'CEA Genoscope', 'None', 'Nikos Kyrpides', 33671, 'Thermococcus gammatolerans EJ3', 593117),
-('Gp0004785', 'Gi04430', 'Bacteroides sp. 1_1_14', 'Whole Genome Sequencing', 'Permanent Draft', 'Complete', 'Broad Institute', 'NIH', 'Nikos Kyrpides', 38765, 'Bacteroides sp. 1_1_14', 469585),
-('Gp0004860', 'Gc01706', 'Fluviicola taffensis RW262, DSM 16823', 'Whole Genome Sequencing', 'Complete and Published', 'Complete', 'DOE Joint Genome Institute (JGI)', 'Leibniz Institute, U.S. Department of Energy (DOE)', 'Nikos Kyrpides', 47603, 'Fluviicola taffensis RW262, DSM 16823', 755732),
-('Gp0004878', 'Gi04215', 'Brucella suis bv. 4 40', 'Whole Genome Sequencing', 'Permanent Draft', 'Complete', 'Broad Institute', 'None', 'Nikos Kyrpides', 34745, 'Brucella suis bv. 4 40', 520488),
-('Gp0004895', 'Gc02418', 'Leptolyngbya sp. PCC 7376', 'Whole Genome Sequencing', 'Complete and Published', 'Complete', 'DOE Joint Genome Institute (JGI)', 'U.S. Department of Energy (DOE)', 'Cheryl Kerfeld', 43487, 'Leptolyngbya sp. PCC 7376', 111781),
-('Gp0004899', 'Gi04195', 'Vibrio parahaemolyticus K5030', 'Whole Genome Sequencing', 'Permanent Draft', 'Complete', 'J. Craig Venter Institute (JCVI)', 'None', 'Nikos Kyrpides', 36311, 'Vibrio parahaemolyticus K5030', 627611),
-('Gp0004920', 'Gi04302', 'Vibrio cholerae sv. O1 el Tor B33', 'Whole Genome Sequencing', 'Permanent Draft', 'Complete', 'Los Alamos National Laboratory', 'None', 'Nikos Kyrpides', 33557, 'Vibrio cholerae sv. O1 el Tor B33', 417400),
-('Gp0002181', 'Gi01678', 'Vibrio cholerae B33', 'Whole Genome Sequencing', 'Permanent Draft', 'Complete', 'J. Craig Venter Institute (JCVI)', 'National Institute of Allergy and Infectious Diseases', 'Nikos Kyrpides', 18499, 'Vibrio cholerae B33', 417400),
-('Gp0005328', 'Gi05063', 'Treponema maltophilum ATCC 51939', 'Whole Genome Sequencing', 'Permanent Draft', 'Complete', 'Broad Institute', 'NIH', 'Nikos Kyrpides', 169489, 'Treponema maltophilum ATCC 51939', 1125699),
-('Gp0005333', 'Gc02469', 'Halobacteroides halobius MD-1, DSM 5150', 'Whole Genome Sequencing', 'Complete and Published', 'Complete', 'DOE Joint Genome Institute (JGI)', 'Leibniz Institute, U.S. Department of Energy (DOE)', 'Nikos Kyrpides', 46811, 'Halobacteroides halobius MD-1, DSM 5150', 42422),
-('Gp0005334', 'Gi05074', 'Halonatronum saccharophilum Z-7986, DSM 13868', 'Whole Genome Sequencing', 'Permanent Draft', 'Complete', 'DOE Joint Genome Institute (JGI)', 'Leibniz Institute, U.S. Department of Energy (DOE)', 'Nikos Kyrpides', 65553, 'Halonatronum saccharophilum Z-7986, DSM 13868', 926692),
-('Gp0005359', 'Gc02156', 'Blastococcus saxobsidens DD2', 'Whole Genome Sequencing', 'Complete and Published', 'Complete', 'CEA Genoscope', 'None', 'Nikos Kyrpides', 82915, 'Blastococcus saxobsidens DD2', 138336),
-('Gp0005388', 'Gi04780', 'Proteus mirabilis', 'Whole Genome Sequencing', 'targeted', 'Targeted', 'None', 'NIH', 'Nikos Kyrpides', 0, 'Proteus mirabilis', 584),
-('Gp0005455', 'Gi04968', 'Lachnospiraceae[G-4] sp. F0158', 'Whole Genome Sequencing', 'targeted', 'Targeted', 'None', 'NIH', 'Nikos Kyrpides', 0, 'Lachnospiraceae[G-4] sp. F0158', 186803),
-('Gp0005494', 'Gi0053784', 'Alistipes indistinctus TSDC19.1-1.1', 'Whole Genome Sequencing', 'incomplete', 'In progress', 'Washington University in St. Louis', 'None', 'JGI automated process', 211589, 'Alistipes indistinctus TSDC19.1-1.1', 626932),
-('Gp0005541', 'Gi04724', 'Kingella denitrificans', 'Whole Genome Sequencing', 'targeted', 'Targeted', 'None', 'NIH', 'Nikos Kyrpides', 0, 'Kingella denitrificans', 502),
-('Gp0005561', 'Gi04843', 'Streptococcus pneumoniae', 'Whole Genome Sequencing', 'targeted', 'Targeted', 'None', 'NIH', 'Nikos Kyrpides', 0, 'Streptococcus pneumoniae', 1313),
-('Gp0005562', 'Gi04847', 'Streptococcus sanguinis', 'Whole Genome Sequencing', 'targeted', 'Targeted', 'None', 'NIH', 'Nikos Kyrpides', 0, 'Streptococcus sanguinis', 1305),
-('Gp0005570', 'Gi04817', 'Staphylococcus sp.', 'Whole Genome Sequencing', 'targeted', 'Targeted', 'None', 'NIH', 'Nikos Kyrpides', 0, 'Staphylococcus sp.', 29387),
-('Gp0005593', 'Gi04851', 'Streptococcus sp. group A', 'Whole Genome Sequencing', 'targeted', 'Targeted', 'None', 'NIH', 'Nikos Kyrpides', 0, 'Streptococcus sp. group A', 36470),
-('Gp0004774', 'Gc01034', 'Thermococcus gammatolerans EJ3', 'Whole Genome Sequencing', 'Complete and Published', 'Complete', 'CEA Genoscope', 'None', 'Nikos Kyrpides', 33671, 'Thermococcus gammatolerans EJ3', 593117),
-('Gp0004785', 'Gi04430', 'Bacteroides sp. 1_1_14', 'Whole Genome Sequencing', 'Permanent Draft', 'Complete', 'Broad Institute', 'NIH', 'Nikos Kyrpides', 38765, 'Bacteroides sp. 1_1_14', 469585),
-('Gp0004860', 'Gc01706', 'Fluviicola taffensis RW262, DSM 16823', 'Whole Genome Sequencing', 'Complete and Published', 'Complete', 'DOE Joint Genome Institute (JGI)', 'Leibniz Institute, U.S. Department of Energy (DOE)', 'Nikos Kyrpides', 47603, 'Fluviicola taffensis RW262, DSM 16823', 755732),
-('Gp0004878', 'Gi04215', 'Brucella suis bv. 4 40', 'Whole Genome Sequencing', 'Permanent Draft', 'Complete', 'Broad Institute', 'None', 'Nikos Kyrpides', 34745, 'Brucella suis bv. 4 40', 520488),
-('Gp0004895', 'Gc02418', 'Leptolyngbya sp. PCC 7376', 'Whole Genome Sequencing', 'Complete and Published', 'Complete', 'DOE Joint Genome Institute (JGI)', 'U.S. Department of Energy (DOE)', 'Cheryl Kerfeld', 43487, 'Leptolyngbya sp. PCC 7376', 111781),
-('Gp0004899', 'Gi04195', 'Vibrio parahaemolyticus K5030', 'Whole Genome Sequencing', 'Permanent Draft', 'Complete', 'J. Craig Venter Institute (JCVI)', 'None', 'Nikos Kyrpides', 36311, 'Vibrio parahaemolyticus K5030', 627611),
-('Gp0004920', 'Gi04302', 'Vibrio cholerae sv. O1 el Tor B33', 'Whole Genome Sequencing', 'Permanent Draft', 'Complete', 'Los Alamos National Laboratory', 'None', 'Nikos Kyrpides', 33557, 'Vibrio cholerae sv. O1 el Tor B33', 417400),
-('Gp0002181', 'Gi01678', 'Vibrio cholerae B33', 'Whole Genome Sequencing', 'Permanent Draft', 'Complete', 'J. Craig Venter Institute (JCVI)', 'National Institute of Allergy and Infectious Diseases', 'Nikos Kyrpides', 18499, 'Vibrio cholerae B33', 417400),
-('Gp0005328', 'Gi05063', 'Treponema maltophilum ATCC 51939', 'Whole Genome Sequencing', 'Permanent Draft', 'Complete', 'Broad Institute', 'NIH', 'Nikos Kyrpides', 169489, 'Treponema maltophilum ATCC 51939', 1125699),
-('Gp0005333', 'Gc02469', 'Halobacteroides halobius MD-1, DSM 5150', 'Whole Genome Sequencing', 'Complete and Published', 'Complete', 'DOE Joint Genome Institute (JGI)', 'Leibniz Institute, U.S. Department of Energy (DOE)', 'Nikos Kyrpides', 46811, 'Halobacteroides halobius MD-1, DSM 5150', 42422),
-('Gp0005334', 'Gi05074', 'Halonatronum saccharophilum Z-7986, DSM 13868', 'Whole Genome Sequencing', 'Permanent Draft', 'Complete', 'DOE Joint Genome Institute (JGI)', 'Leibniz Institute, U.S. Department of Energy (DOE)', 'Nikos Kyrpides', 65553, 'Halonatronum saccharophilum Z-7986, DSM 13868', 926692),
-('Gp0005359', 'Gc02156', 'Blastococcus saxobsidens DD2', 'Whole Genome Sequencing', 'Complete and Published', 'Complete', 'CEA Genoscope', 'None', 'Nikos Kyrpides', 82915, 'Blastococcus saxobsidens DD2', 138336),
-('Gp0005388', 'Gi04780', 'Proteus mirabilis', 'Whole Genome Sequencing', 'targeted', 'Targeted', 'None', 'NIH', 'Nikos Kyrpides', 0, 'Proteus mirabilis', 584),
-('Gp0005455', 'Gi04968', 'Lachnospiraceae[G-4] sp. F0158', 'Whole Genome Sequencing', 'targeted', 'Targeted', 'None', 'NIH', 'Nikos Kyrpides', 0, 'Lachnospiraceae[G-4] sp. F0158', 186803),
-('Gp0005494', 'Gi0053784', 'Alistipes indistinctus TSDC19.1-1.1', 'Whole Genome Sequencing', 'incomplete', 'In progress', 'Washington University in St. Louis', 'None', 'JGI automated process', 211589, 'Alistipes indistinctus TSDC19.1-1.1', 626932),
-('Gp0005541', 'Gi04724', 'Kingella denitrificans', 'Whole Genome Sequencing', 'targeted', 'Targeted', 'None', 'NIH', 'Nikos Kyrpides', 0, 'Kingella denitrificans', 502),
-('Gp0005561', 'Gi04843', 'Streptococcus pneumoniae', 'Whole Genome Sequencing', 'targeted', 'Targeted', 'None', 'NIH', 'Nikos Kyrpides', 0, 'Streptococcus pneumoniae', 1313),
-('Gp0005562', 'Gi04847', 'Streptococcus sanguinis', 'Whole Genome Sequencing', 'targeted', 'Targeted', 'None', 'NIH', 'Nikos Kyrpides', 0, 'Streptococcus sanguinis', 1305),
-('Gp0005570', 'Gi04817', 'Staphylococcus sp.', 'Whole Genome Sequencing', 'targeted', 'Targeted', 'None', 'NIH', 'Nikos Kyrpides', 0, 'Staphylococcus sp.', 29387),
-('Gp0005593', 'Gi04851', 'Streptococcus sp. group A', 'Whole Genome Sequencing', 'targeted', 'Targeted', 'None', 'NIH', 'Nikos Kyrpides', 0, 'Streptococcus sp. group A', 36470),
+INSERT INTO `project` (`GOLDSTAMP`, `LEGACY_GOLDSTAMP`, `PROJECT_NAME`, `PROJECT_TYPE`, `PROJECT_STATUS`, `SEQUENCING_STATUS`, `SEQUENCING_CENTERS`, `FUNDING`, `CONTACT_NAME`, `NCBI_BIOPROJECT_ID`, `NCBI_PROJECT_NAME`, `NCBI_TAXON_ID`) VALUES
 ('Gp0004774', 'Gc01034', 'Thermococcus gammatolerans EJ3', 'Whole Genome Sequencing', 'Complete and Published', 'Complete', 'CEA Genoscope', 'None', 'Nikos Kyrpides', 33671, 'Thermococcus gammatolerans EJ3', 593117),
 ('Gp0004785', 'Gi04430', 'Bacteroides sp. 1_1_14', 'Whole Genome Sequencing', 'Permanent Draft', 'Complete', 'Broad Institute', 'NIH', 'Nikos Kyrpides', 38765, 'Bacteroides sp. 1_1_14', 469585),
 ('Gp0004860', 'Gc01706', 'Fluviicola taffensis RW262, DSM 16823', 'Whole Genome Sequencing', 'Complete and Published', 'Complete', 'DOE Joint Genome Institute (JGI)', 'Leibniz Institute, U.S. Department of Energy (DOE)', 'Nikos Kyrpides', 47603, 'Fluviicola taffensis RW262, DSM 16823', 755732),
@@ -267,8 +226,7 @@ INSERT INTO `project` (`GOLDSTAMP`, `LEGACY_GOLDSTAMP`, `PROJECT_NAME`, `PROJECT
 ('Gp0010682', 'Gi09581', 'Lebetimonas sp. JS032', 'Whole Genome Sequencing', 'incomplete', 'Complete', 'Marine Biological Laboratory', 'None', 'Ioanna Pagani', 208428, 'Lebetimonas sp. JS032', 990070),
 ('Gp0010694', 'Gi09577', 'Pseudomonas aeruginosa AMC 25-A-2, ATCC 8709', 'Whole Genome Sequencing', 'incomplete', 'Complete', 'University of Toronto', 'None', 'Heather Maughan', 0, 'Pseudomonas aeruginosa AMC 25-A-2, ATCC 8709', 287),
 ('Gp0010719', 'Gi09298', 'Vibrio cholerae HC-48B2', 'Whole Genome Sequencing', 'Permanent Draft', 'Complete', 'University of Maryland School of Medicine', 'None', 'Ioanna Pagani', 63939, 'Vibrio cholerae HC-48B2', 991966),
-('Gp0010729', 'Gi09302', 'Vibrio cholerae HC-55A1', 'Whole Genome Sequencing', 'Permanent Draft', 'Complete', 'University of Maryland School of Medicine', 'None', 'Ioanna Pagani', 63947, 'Vibrio cholerae HC-55A1', 991970);
-INSERT INTO `project` (`GOLDSTAMP`, `LEGACY_GOLDSTAMP`, `PROJECT_NAME`, `PROJECT_TYPE`, `PROJECT_STATUS`, `SEQUENCING_STATUS`, `SEQUENCING_CENTERS`, `FUNDING`, `CONTACT_NAME`, `NCBI_BIOPROJECT ID`, `NCBI_PROJECT_NAME`, `NCBI_TAXON_ID`) VALUES
+('Gp0010729', 'Gi09302', 'Vibrio cholerae HC-55A1', 'Whole Genome Sequencing', 'Permanent Draft', 'Complete', 'University of Maryland School of Medicine', 'None', 'Ioanna Pagani', 63947, 'Vibrio cholerae HC-55A1', 991970),
 ('Gp0010756', 'Gi09309', 'Vibrio cholerae HC-59A1', 'Whole Genome Sequencing', 'Permanent Draft', 'Complete', 'University of Maryland School of Medicine', 'None', 'Ioanna Pagani', 63961, 'Vibrio cholerae HC-59A1', 991977),
 ('Gp0010770', 'Gi0002428', 'Rhodococcus rhodochrous J38', 'Whole Genome Sequencing', 'incomplete', 'Complete', 'DOE Joint Genome Institute (JGI)', 'U.S. Department of Energy (DOE)', 'Konstantinos Liolios', 202335, 'Rhodococcus rhodochrous J38', 935843),
 ('Gp0010774', 'Gi09482', 'Yersinia pestis PY-19', 'Whole Genome Sequencing', 'Permanent Draft', 'Complete', 'University of Maryland School of Medicine', 'None', 'Ioanna Pagani', 64313, 'Yersinia pestis PY-19', 992143),
@@ -307,7 +265,8 @@ INSERT INTO `project` (`GOLDSTAMP`, `LEGACY_GOLDSTAMP`, `PROJECT_NAME`, `PROJECT
 ('Gp0011305', 'Gi09709', 'Lactobacillus salivarius NIAS840', 'Whole Genome Sequencing', 'Permanent Draft', 'Complete', 'National Livestock Research Institute', 'None', 'Ioanna Pagani', 66655, 'Lactobacillus salivarius NIAS840', 1029822),
 ('Gp0011341', 'Gi09672', 'Veillonella sp. ACP1', 'Whole Genome Sequencing', 'Permanent Draft', 'Complete', 'J. Craig Venter Institute (JCVI)', 'NIH', 'Konstantinos Liolios', 78581, 'Veillonella sp. ACP1', 936588),
 ('Gp0011375', 'Gi09991', 'Escherichia coli 95.1288', 'Whole Genome Sequencing', 'Permanent Draft', 'Complete', 'University of Maryland School of Medicine', 'None', 'JGI automated process', 65611, 'Escherichia coli 95.1288', 1005407),
-('Gp0011392', 'Gi10209', 'Mycobacterium abscessus 4S-0116-R', 'Whole Genome Sequencing', 'Permanent Draft', 'Complete', 'University of Maryland School of Medicine', 'None', 'JGI automated process', 65179, 'Mycobacterium abscessus 4S-0116-R', 1001725),
+('Gp0011392', 'Gi10209', 'Mycobacterium abscessus 4S-0116-R', 'Whole Genome Sequencing', 'Permanent Draft', 'Complete', 'University of Maryland School of Medicine', 'None', 'JGI automated process', 65179, 'Mycobacterium abscessus 4S-0116-R', 1001725);
+INSERT INTO `project` (`GOLDSTAMP`, `LEGACY_GOLDSTAMP`, `PROJECT_NAME`, `PROJECT_TYPE`, `PROJECT_STATUS`, `SEQUENCING_STATUS`, `SEQUENCING_CENTERS`, `FUNDING`, `CONTACT_NAME`, `NCBI_BIOPROJECT_ID`, `NCBI_PROJECT_NAME`, `NCBI_TAXON_ID`) VALUES
 ('Gp0011455', 'Gi0019857', 'BRC1 bacterium SCGC AAA257-C11', 'Whole Genome Sequencing', 'Permanent Draft', 'Complete', 'DOE Joint Genome Institute (JGI)', 'U.S. Department of Energy (DOE)', 'Christian Rinke', 192498, 'BRC1 bacterium SCGC AAA257-C11', 1046935),
 ('Gp0011456', 'Gi0019856', 'Parcubacteria bacterium SCGC AAA255-P19', 'Whole Genome Sequencing', 'Permanent Draft', 'Complete', 'DOE Joint Genome Institute (JGI)', 'U.S. Department of Energy (DOE)', 'Christian Rinke', 192497, 'Parcubacteria bacterium SCGC AAA255-P19', 1047085),
 ('Gp0011501', 'Gi0005515', 'Salmonella enterica enterica sv. Heidelberg RI-11-013988', 'Whole Genome Sequencing', 'Permanent Draft', 'Complete', 'U.S. Food and Drug Administration', 'None', 'JGI automated process', 69883, 'Salmonella enterica enterica sv. Heidelberg RI-11-013988', 1054952),
@@ -477,8 +436,7 @@ INSERT INTO `project` (`GOLDSTAMP`, `LEGACY_GOLDSTAMP`, `PROJECT_NAME`, `PROJECT
 ('Gp0013077', 'Gi11712', 'Nocardioides insulae DSM 17944', 'Whole Genome Sequencing', 'Permanent Draft', 'Draft', 'DOE Joint Genome Institute (JGI)', 'Leibniz Institute, U.S. Department of Energy (DOE)', 'JGI automated process', 185607, 'Nocardioides insulae DSM 17944', 1122610),
 ('Gp0013091', 'Gi11726', 'Ottowia thiooxydans DSM 14619', 'Whole Genome Sequencing', 'Permanent Draft', 'Draft', 'DOE Joint Genome Institute (JGI)', 'Leibniz Institute, U.S. Department of Energy (DOE)', 'JGI automated process', 185610, 'Ottowia thiooxydans DSM 14619', 1122623),
 ('Gp0015596', 'Gr00417', 'Escherichia coli K-12, DEMG1655-ET303', 'Resequencing', 'incomplete', 'Complete', 'DOE Joint Genome Institute (JGI)', 'U.S. Department of Energy (DOE)', 'JGI automated process', 337233, 'Escherichia coli K-12, DEMG1655-ET303', 562),
-('Gp0015633', 'Gr00465', 'Clostridium phytofermentans ISDg, Cphy_SGX1100', 'Resequencing', 'incomplete', 'Complete', 'DOE Joint Genome Institute (JGI)', 'U.S. Department of Energy (DOE)', 'JGI automated process', 337242, 'Clostridium phytofermentans ISDg, Cphy_SGX1100', 66219);
-INSERT INTO `project` (`GOLDSTAMP`, `LEGACY_GOLDSTAMP`, `PROJECT_NAME`, `PROJECT_TYPE`, `PROJECT_STATUS`, `SEQUENCING_STATUS`, `SEQUENCING_CENTERS`, `FUNDING`, `CONTACT_NAME`, `NCBI_BIOPROJECT ID`, `NCBI_PROJECT_NAME`, `NCBI_TAXON_ID`) VALUES
+('Gp0015633', 'Gr00465', 'Clostridium phytofermentans ISDg, Cphy_SGX1100', 'Resequencing', 'incomplete', 'Complete', 'DOE Joint Genome Institute (JGI)', 'U.S. Department of Energy (DOE)', 'JGI automated process', 337242, 'Clostridium phytofermentans ISDg, Cphy_SGX1100', 66219),
 ('Gp0015694', 'Gr00728', 'Clostridium thermocellum 596', 'Resequencing', 'incomplete', 'Complete', 'DOE Joint Genome Institute (JGI)', 'U.S. Department of Energy (DOE)', 'JGI automated process', 337256, 'Clostridium thermocellum 596', 1515),
 ('Gp0011773', 'Gi09873', 'Bombyx mori Sichuang M3', 'Whole Genome Sequencing', 'incomplete', 'Complete', 'Beijing Genomics Institute (BGI)', 'None', 'Jakob Jansson', 0, 'Bombyx mori Sichuang M3', 7091),
 ('Gp0011778', 'Gi10345', 'Escherichia coli O104:H4 11-4404', 'Whole Genome Sequencing', 'Permanent Draft', 'Complete', 'Broad Institute', 'None', 'JGI automated process', 70733, 'Escherichia coli O104:H4 11-4404', 1068614),
@@ -515,7 +473,8 @@ INSERT INTO `project` (`GOLDSTAMP`, `LEGACY_GOLDSTAMP`, `PROJECT_NAME`, `PROJECT
 ('Gp0012519', 'Gi10827', 'Streptococcus pyogenes GA41345', 'Whole Genome Sequencing', 'Permanent Draft', 'Complete', 'J. Craig Venter Institute (JCVI)', 'NIH', 'Ioanna Pagani', 78609, 'Streptococcus pyogenes GA41345', 1115813),
 ('Gp0012584', 'Gi10526', 'SAR324 cluster bacterium JCVI-SC AAA005', 'Whole Genome Sequencing', 'Permanent Draft', 'Complete', 'J. Craig Venter Institute (JCVI)', 'None', 'JGI automated process', 71321, 'SAR324 cluster bacterium JCVI-SC AAA005', 1073573),
 ('Gp0012594', 'Gi10548', 'Salmonella enterica enterica sv. Montevideo R8_4889', 'Whole Genome Sequencing', 'incomplete', 'In progress', 'Life Technologies', 'None', 'JGI automated process', 71627, 'Salmonella enterica enterica sv. Montevideo R8_4889', 1074539),
-('Gp0012621', 'Gc01970', 'Sulfobacillus acidophilus TPY', 'Whole Genome Sequencing', 'Complete and Published', 'Complete', 'Beijing Genomics Institute (BGI)', 'None', 'Nikos Kyrpides', 68423, 'Sulfobacillus acidophilus TPY', 1051632),
+('Gp0012621', 'Gc01970', 'Sulfobacillus acidophilus TPY', 'Whole Genome Sequencing', 'Complete and Published', 'Complete', 'Beijing Genomics Institute (BGI)', 'None', 'Nikos Kyrpides', 68423, 'Sulfobacillus acidophilus TPY', 1051632);
+INSERT INTO `project` (`GOLDSTAMP`, `LEGACY_GOLDSTAMP`, `PROJECT_NAME`, `PROJECT_TYPE`, `PROJECT_STATUS`, `SEQUENCING_STATUS`, `SEQUENCING_CENTERS`, `FUNDING`, `CONTACT_NAME`, `NCBI_BIOPROJECT_ID`, `NCBI_PROJECT_NAME`, `NCBI_TAXON_ID`) VALUES
 ('Gp0012653', 'Gi10683', 'Streptococcus sobrinus TCI-355', 'Whole Genome Sequencing', 'Permanent Draft', 'Complete', 'J. Craig Venter Institute (JCVI)', 'None', 'JGI automated process', 71919, 'Streptococcus sobrinus TCI-355', 1074076),
 ('Gp0012688', 'Gi10917', 'Staphylococcus sp. KPL1816', 'Whole Genome Sequencing', 'incomplete', 'DNA Received', 'Broad Institute', 'NIH', 'JGI automated process', 169475, 'Staphylococcus sp. KPL1816', 1203580),
 ('Gp0012707', 'Gi10960', 'Capnocytophaga sp. oral taxon 412 F0487', 'Whole Genome Sequencing', 'Permanent Draft', 'Complete', 'J. Craig Venter Institute (JCVI)', 'NIH', 'Ioanna Pagani', 78903, 'Capnocytophaga sp. oral taxon 412 F0487', 1125721),
