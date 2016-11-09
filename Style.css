@@ -1,8 +1,20 @@
+
+
+html
+{
+padding-left: 15%;
+background: url("background.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
 /*********************BODY*************************/
 
 body
-{
-	background: url("background.jpg") fixed no-repeat;
+{	
 }
 
 
