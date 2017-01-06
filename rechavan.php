@@ -12,6 +12,13 @@ $req6=$bdd->query('SELECT DISTINCT `CONTACT_NAME` FROM `project`');
 $reqDOM=$bdd->query('SELECT DISTINCT `DOMAIN` FROM `taxon`');
 $reqKIN=$bdd->query('SELECT DISTINCT `KINGDOM` FROM `taxon`');
 
+/*TEST
+
+while ($tab_rep = $req->fetch()){
+	echo $tab_rep['PROJECT_TYPE'];
+}
+/TEST*/
+
 ?>
 <script language="javascript" type="text/javascript">
  
@@ -49,7 +56,7 @@ function showHideText(divID)
 			</fieldset>	
 			<fieldset>
 			<legend><label><INPUT type="checkbox" id="tax" name="cbtax" onclick="showHideText('li_tax')">Taxon</label></legend>
-				<div id="li_tax" style="display:none;">
+			<div id="li_tax" style="display:none;">
 				<label><INPUT type="checkbox" id="formtaxID" name="cbtaxid" onclick="showHideText('divnti')">NCBI_TAXON_ID</label>
 				<label><INPUT type="checkbox" id="formdom" name="cbdom" onclick="showHideText('divDOM')">DOMAIN</label>
 				<label><INPUT type="checkbox" id="formkin" name="cbkin" onclick="showHideText('divKIN')">KINGDOM</label>
@@ -77,11 +84,11 @@ function showHideText(divID)
 			</div>
 			<div id="divpt" style="display:none;">
 				<p><label for="PROJECT_TYPE">PROJECT_TYPE</label></br>
-				<select style='width:300px' name="PROJECT_TYPE" id="PROJECT_TYPE" default="">
+				<select style='width:300px' name="PROJECT_TYPE" id="PROJECT_TYPE">
 				<option value=""></option>
 				<?php
 					while ($tab_rep = $req->fetch()){
-						?><option value=<?php $tab_rep['PROJECT_TYPE'] ?> > <?php echo $tab_rep['PROJECT_TYPE'] ?></option> <?php
+						?><option value="<?php echo $tab_rep['PROJECT_TYPE'] ?>" > <?php echo $tab_rep['PROJECT_TYPE'] ?></option> <?php
 					}
 					$req->closeCursor();
 				?>
@@ -93,7 +100,7 @@ function showHideText(divID)
 				<option value=""></option>
 				<?php
 				while ($tab_rep = $req2->fetch()){
-					?><option value=<?php $tab_rep['PROJECT_STATUS'] ?> > <?php echo $tab_rep['PROJECT_STATUS'] ?></option> <?php
+					?><option value="<?php echo $tab_rep['PROJECT_STATUS'] ?>" > <?php echo $tab_rep['PROJECT_STATUS'] ?></option> <?php
 				}
 				$req2->closeCursor();
 				?>
@@ -105,7 +112,7 @@ function showHideText(divID)
 				<option value=""></option>
 				<?php
 				while ($tab_rep = $req3->fetch()){
-					?><option value=<?php $tab_rep['SEQUENCING_STATUS'] ?> > <?php echo $tab_rep['SEQUENCING_STATUS'] ?></option> <?php
+					?><option value="<?php echo $tab_rep['SEQUENCING_STATUS'] ?>" > <?php echo $tab_rep['SEQUENCING_STATUS'] ?></option> <?php
 				}
 				$req3->closeCursor();
 				?>
@@ -117,7 +124,7 @@ function showHideText(divID)
 				<option value=""></option>
 				<?php
 				while ($tab_rep = $req4->fetch()){
-					?><option value=<?php $tab_rep['SEQUENCING_CENTERS'] ?> > <?php echo $tab_rep['SEQUENCING_CENTERS'] ?></option> <?php
+					?><option value="<?php echo $tab_rep['SEQUENCING_CENTERS'] ?>" > <?php echo $tab_rep['SEQUENCING_CENTERS'] ?></option> <?php
 				}
 				$req4->closeCursor();
 				?>
@@ -129,7 +136,7 @@ function showHideText(divID)
 				<option value=""></option>
 				<?php
 				while ($tab_rep = $req5->fetch()){
-					?><option value=<?php $tab_rep['FUNDING'] ?> > <?php echo $tab_rep['FUNDING'] ?></option> <?php
+					?><option value="<?php echo $tab_rep['FUNDING'] ?>" > <?php echo $tab_rep['FUNDING'] ?></option> <?php
 				}
 				$req5->closeCursor();
 				?>
@@ -141,7 +148,7 @@ function showHideText(divID)
 				<option value=""></option>
 				<?php
 				while ($tab_rep = $req6->fetch()){
-					?><option value=<?php $tab_rep['CONTACT_NAME'] ?> > <?php echo $tab_rep['CONTACT_NAME'] ?></option> <?php
+					?><option value="<?php echo $tab_rep['CONTACT_NAME'] ?>" > <?php echo $tab_rep['CONTACT_NAME'] ?></option> <?php
 				}
 				$req6->closeCursor();
 				?>
@@ -167,21 +174,21 @@ function showHideText(divID)
 				<option value=""></option>
 				<?php
 				while ($tab_rep = $reqDOM->fetch()){
-					?><option value=<?php $tab_rep['DOMAIN'] ?> > <?php echo $tab_rep['DOMAIN'] ?></option> <?php
+					?><option value="<?php echo $tab_rep['DOMAIN'] ?>" > <?php echo $tab_rep['DOMAIN'] ?></option> <?php
 				}
 				$reqDOM->closeCursor();
 				?>
 				</select></p>
 			</div>
 			<div id="divKIN" style="display:none;">
-				<p><label for="SEQUENCING_STATUS">SEQUENCING_STATUS</label></br>
-				<select style='width:300px' name="SEQUENCING_STATUS" id="SEQUENCING_STATUS">
+				<p><label for="KINGDOM">KINGDOM</label></br>
+				<select style='width:300px' name="KINGDOM" id="KINGDOM">
 				<option value=""></option>
 				<?php
-				while ($tab_rep = $req3->fetch()){
-					?><option value=<?php $tab_rep['SEQUENCING_STATUS'] ?> > <?php echo $tab_rep['SEQUENCING_STATUS'] ?></option> <?php
+				while ($tab_rep = $reqKIN->fetch()){
+					?><option value="<?php echo $tab_rep['KINGDOM'] ?>"> <?php echo $tab_rep['KINGDOM'] ?></option> <?php
 				}
-				$req3->closeCursor();
+				$reqKIN->closeCursor();
 				?>
 				</select></p>
 			</div>
