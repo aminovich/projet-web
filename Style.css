@@ -198,3 +198,22 @@ tr td
 {
 	font-size: 17px;
 }
+/*********************contact*********************/
+div.img {
+    margin: 100px;
+    border: 1px ;
+    padding-left: 150px;
+    width: 150 px;
+    position:absolute;
+	z-index:2;
+}
+
+div.img img {
+    width: 100px;
+    height:150px;
+}
+
+div.img img:hover {
+    width: 200px;
+    height:300px;
+}
