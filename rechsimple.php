@@ -1,10 +1,7 @@
-<?php include("template.php");?>
-
 <!--/*Eviter recherche vide!!*/-->
 
-<section>
-	<?php
-	if (isset($_GET['query']))
+<?php
+	if (isset($_GET['query']) && !(empty($_GET['query'])))
 	{
 		include ('connexionBDD.php');
 		
@@ -13,7 +10,10 @@
 		$answer2 = $bdd->prepare('SELECT COUNT(DISTINCT GOLDSTAMP) FROM project WHERE GOLDSTAMP LIKE ?');
 		$answer2->execute(array("%".$_GET['query']."%"));
 		$count = $answer2->fetch();
-	?>
+		
+		include("template.php");
+?>
+<section>
 	<div id="center">
 		<h1>Results</h1>
 		<h4>Query:<?php echo '"'.$_GET['query'].'"<br>'.$count["COUNT(DISTINCT GOLDSTAMP)"].' results';?></h4>
@@ -42,6 +42,10 @@
 		}
 
 		$answer->closeCursor();
+	}
+	else
+	{
+		include("home.php");
 	}
 
 	?>

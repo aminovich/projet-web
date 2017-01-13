@@ -1,28 +1,26 @@
 <?php include("template.php");?>
 
-<!--/*ENLEVER LES "NONE"!!!!-->
-
 <section>
 	<?php
 		if (isset($_GET['col']))
 		{
 			include ('connexionBDD.php');
 			/*ORDONNER LES RESULTATS DES REQUETES*/
-			if($_GET['col']=='GOLDSTAMP')
-			{
-				$answer = $bdd->query('SELECT DISTINCT (GOLDSTAMP) FROM project');
-				$answer2 = $bdd->query('SELECT COUNT(DISTINCT GOLDSTAMP) FROM project');
-				$nb = $answer2->fetch();
-				$count = $nb['COUNT(DISTINCT GOLDSTAMP)'];
-			}
-			elseif($_GET['col']=='NCBI_PROJECT_NAME')
-			{
-				$answer = $bdd->query('SELECT DISTINCT (NCBI_PROJECT_NAME) FROM project');
-				$answer2 = $bdd->query('SELECT COUNT(DISTINCT NCBI_PROJECT_NAME) FROM project');
-				$nb = $answer2->fetch();
-				$count = $nb['COUNT(DISTINCT NCBI_PROJECT_NAME)'];
-			}
-			elseif($_GET['col']=='PROJECT_TYPE')
+			//~ if($_GET['col']=='GOLDSTAMP')
+			//~ {
+				//~ $answer = $bdd->query('SELECT DISTINCT (GOLDSTAMP) FROM project');
+				//~ $answer2 = $bdd->query('SELECT COUNT(DISTINCT GOLDSTAMP) FROM project');
+				//~ $nb = $answer2->fetch();
+				//~ $count = $nb['COUNT(DISTINCT GOLDSTAMP)'];
+			//~ }
+			//~ elseif($_GET['col']=='NCBI_PROJECT_NAME')
+			//~ {
+				//~ $answer = $bdd->query('SELECT DISTINCT (NCBI_PROJECT_NAME) FROM project');
+				//~ $answer2 = $bdd->query('SELECT COUNT(DISTINCT NCBI_PROJECT_NAME) FROM project');
+				//~ $nb = $answer2->fetch();
+				//~ $count = $nb['COUNT(DISTINCT NCBI_PROJECT_NAME)'];
+			//~ }
+			if($_GET['col']=='PROJECT_TYPE')
 			{
 				$answer = $bdd->query('SELECT DISTINCT (PROJECT_TYPE) FROM project');
 				$answer2 = $bdd->query('SELECT COUNT(DISTINCT PROJECT_TYPE) FROM project');
@@ -41,21 +39,21 @@
 				$answer = $bdd->query('SELECT DISTINCT (SEQUENCING_CENTERS) FROM project');
 				$answer2 = $bdd->query('SELECT COUNT(DISTINCT SEQUENCING_CENTERS) FROM project');
 				$nb = $answer2->fetch();
-				$count = $nb['COUNT(DISTINCT SEQUENCING_CENTERS)'];
+				$count = $nb['COUNT(DISTINCT SEQUENCING_CENTERS)']-1;
 			}
-			elseif($_GET['col']=='SEQUENCING_STATUS')
-			{
-				$answer = $bdd->query('SELECT DISTINCT (SEQUENCING_STATUS) FROM project');
-				$answer2 = $bdd->query('SELECT COUNT(DISTINCT SEQUENCING_STATUS) FROM project');
-				$nb = $answer2->fetch();
-				$count = $nb['COUNT(DISTINCT SEQUENCING_STATUS)'];
-			}
+			//~ elseif($_GET['col']=='SEQUENCING_STATUS')
+			//~ {
+				//~ $answer = $bdd->query('SELECT DISTINCT (SEQUENCING_STATUS) FROM project');
+				//~ $answer2 = $bdd->query('SELECT COUNT(DISTINCT SEQUENCING_STATUS) FROM project');
+				//~ $nb = $answer2->fetch();
+				//~ $count = $nb['COUNT(DISTINCT SEQUENCING_STATUS)'];
+			//~ }
 			elseif($_GET['col']=='FUNDING')
 			{
 				$answer = $bdd->query('SELECT DISTINCT (FUNDING) FROM project');
 				$answer2 = $bdd->query('SELECT COUNT(DISTINCT FUNDING) FROM project');
 				$nb = $answer2->fetch();
-				$count = $nb['COUNT(DISTINCT FUNDING)'];
+				$count = $nb['COUNT(DISTINCT FUNDING)']-1;
 			}
 			elseif($_GET['col']=='DOMAIN')
 			{
@@ -69,50 +67,50 @@
 				$answer = $bdd->query('SELECT DISTINCT (KINGDOM) FROM taxon');
 				$answer2 = $bdd->query('SELECT COUNT(DISTINCT KINGDOM) FROM taxon');
 				$nb = $answer2->fetch();
-				$count = $nb['COUNT(DISTINCT KINGDOM)'];
+				$count = $nb['COUNT(DISTINCT KINGDOM)']-1;
 			}
 			elseif($_GET['col']=='PHYLUM')
 			{
 				$answer = $bdd->query('SELECT DISTINCT (PHYLUM) FROM taxon');
 				$answer2 = $bdd->query('SELECT COUNT(DISTINCT PHYLUM) FROM taxon');
 				$nb = $answer2->fetch();
-				$count = $nb['COUNT(DISTINCT PHYLUM)'];
+				$count = $nb['COUNT(DISTINCT PHYLUM)']-1;
 			}
 			elseif($_GET['col']=='CLASS')
 			{
 				$answer = $bdd->query('SELECT DISTINCT (CLASS) FROM taxon');
 				$answer2 = $bdd->query('SELECT COUNT(DISTINCT CLASS) FROM taxon');
 				$nb = $answer2->fetch();
-				$count = $nb['COUNT(DISTINCT CLASS)'];
+				$count = $nb['COUNT(DISTINCT CLASS)']-1;
 			}
 			elseif($_GET['col']=='ORDER_')
 			{
 				$answer = $bdd->query('SELECT DISTINCT (ORDER_) FROM taxon');
 				$answer2 = $bdd->query('SELECT COUNT(DISTINCT ORDER_) FROM taxon');
 				$nb = $answer2->fetch();
-				$count = $nb['COUNT(DISTINCT ORDER_)'];
+				$count = $nb['COUNT(DISTINCT ORDER_)']-1;
 			}
-			elseif($_GET['col']=='FAMILY')
-			{
-				$answer = $bdd->query('SELECT DISTINCT (FAMILY) FROM taxon');
-				$answer2 = $bdd->query('SELECT COUNT(DISTINCT FAMILY) FROM taxon');
-				$nb = $answer2->fetch();
-				$count = $nb['COUNT(DISTINCT FAMILY)'];
-			}
-			elseif($_GET['col']=='GENUS')
-			{
-				$answer = $bdd->query('SELECT DISTINCT (GENUS) FROM taxon');
-				$answer2 = $bdd->query('SELECT COUNT(DISTINCT GENUS) FROM taxon');
-				$nb = $answer2->fetch();
-				$count = $nb['COUNT(DISTINCT GENUS)'];
-			}
-			elseif($_GET['col']=='SPECIES')
-			{
-				$answer = $bdd->query('SELECT DISTINCT (SPECIES) FROM taxon');
-				$answer2 = $bdd->query('SELECT COUNT(DISTINCT SPECIES) FROM taxon');
-				$nb = $answer2->fetch();
-				$count = $nb['COUNT(DISTINCT SPECIES)'];
-			}
+			//~ elseif($_GET['col']=='FAMILY')
+			//~ {
+				//~ $answer = $bdd->query('SELECT DISTINCT (FAMILY) FROM taxon');
+				//~ $answer2 = $bdd->query('SELECT COUNT(DISTINCT FAMILY) FROM taxon');
+				//~ $nb = $answer2->fetch();
+				//~ $count = $nb['COUNT(DISTINCT FAMILY)'];
+			//~ }
+			//~ elseif($_GET['col']=='GENUS')
+			//~ {
+				//~ $answer = $bdd->query('SELECT DISTINCT (GENUS) FROM taxon');
+				//~ $answer2 = $bdd->query('SELECT COUNT(DISTINCT GENUS) FROM taxon');
+				//~ $nb = $answer2->fetch();
+				//~ $count = $nb['COUNT(DISTINCT GENUS)'];
+			//~ }
+			//~ elseif($_GET['col']=='SPECIES')
+			//~ {
+				//~ $answer = $bdd->query('SELECT DISTINCT (SPECIES) FROM taxon');
+				//~ $answer2 = $bdd->query('SELECT COUNT(DISTINCT SPECIES) FROM taxon');
+				//~ $nb = $answer2->fetch();
+				//~ $count = $nb['COUNT(DISTINCT SPECIES)'];
+			//~ }
 	?>
 		
 		
@@ -121,52 +119,44 @@
 			<h4 style="padding-left:50px;"><?php echo $count.' results';?></h4>
 			<table class="tab1">
 			<?php
-				if($_GET['col']=='GOLDSTAMP')
+				while ($data = $answer->fetch())
 				{
-					while ($data = $answer->fetch())
+					if($data[$_GET['col']] == "None")
+					{
+						$data = $answer->fetch();
+					}
+					if($data)
 					{
 			?>
-						<tr><td><ul><li><a href="fiche.php?Gp=<?php echo $data[$_GET['col']];?>" ><?php echo $data[$_GET['col']];
-											$data = $answer->fetch();
-											if($data){
-										?></a></li></ul></td>
-						
-						<td><ul><li><a href="fiche.php?Gp=<?php echo $data[$_GET['col']];?>" ><?php echo $data[$_GET['col']];
-											}
-											$data = $answer->fetch();
-											if($data){
-									?></a></li></ul></td>
-											
-						<td><ul><li><a href="fiche.php?Gp=<?php echo $data[$_GET['col']];?>" ><?php echo $data[$_GET['col']];
-											}
-									?></a></li></ul></td></tr>
-			<?php
+					<tr><td><ul><li><a href="rechnav.php?query=<?php echo $data[$_GET['col']];?>" ><?php echo $data[$_GET['col']];
+						$data = $answer->fetch();
 					}
-				}
-				else
-				{
-					while ($data = $answer->fetch())
+					if($data && $data[$_GET['col']] == "None")
 					{
-			?>
-						<tr><td><ul><li><a href="rechnav.php?query=<?php echo $data[$_GET['col']];?>" ><?php echo $data[$_GET['col']];
-											$data = $answer->fetch();
-											if($data){
-										?></a></li></ul></td>
-						
-						<td><ul><li><a href="rechnav.php?query=<?php echo $data[$_GET['col']];?>" ><?php echo $data[$_GET['col']];
-											}
-											$data = $answer->fetch();
-											if($data){
-									?></a></li></ul></td>
-											
-						<td><ul><li><a href="rechnav.php?query=<?php echo $data[$_GET['col']];?>" ><?php echo $data[$_GET['col']];
-											}
-									?></a></li></ul></td></tr>
-			<?php
+						$data = $answer->fetch();
 					}
+					if($data)
+					{
+					?></a></li></ul></td>
+					
+					<td><ul><li><a href="rechnav.php?query=<?php echo $data[$_GET['col']];?>" ><?php echo $data[$_GET['col']];
+						$data = $answer->fetch();
+					}
+					if($data && $data[$_GET['col']] == "None")
+					{
+						$data = $answer->fetch();
+					}
+					if($data)
+					{
+					?></a></li></ul></td>
+											
+					<td><ul><li><a href="rechnav.php?query=<?php echo $data[$_GET['col']];?>" ><?php echo $data[$_GET['col']];
+					}
+					?></a></li></ul></td></tr>
+			<?php
 				}
-				
-				$answer->closeCursor();
+			
+			$answer->closeCursor();
 	}		
 			?>
 			</table>
