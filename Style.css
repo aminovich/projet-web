@@ -274,3 +274,34 @@ div.img3 img:hover {
     width: 300px;
     height:300px;
 }
+
+
+/*********************About*********************/
+div.logos {
+    float:right;
+    padding-right: 5%;
+    padding-top: 10%
+}
+
+div.img4 img {
+    width: 350px;
+    height:250px;
+    border-radius: 10px;
+    border: 3px black solid;
+}
+
+
+div.img5 img {
+    width: 450px;
+    height:150px;
+    border-radius: 10px;
+    border: 3px black solid;
+}
+
+
+div.about {
+	width: 40%;
+	padding-left: 6%;
+	float: left;
+	padding-top: 7%; 
+}
