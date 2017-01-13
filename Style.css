@@ -201,19 +201,76 @@ tr td
 /*********************contact*********************/
 div.img {
     margin: 100px;
-    border: 1px ;
     padding-left: 150px;
-    width: 150 px;
     position:absolute;
 	z-index:2;
 }
 
-div.img img {
-    width: 100px;
-    height:150px;
+
+
+div.img1 span {
+background-color:#C0C0C0;
+padding:3px;
+box-shadow:2px 2px 2px gray,
+-1px -1px 2px white;
+Font-Weight: Bold; 
 }
 
-div.img img:hover {
-    width: 200px;
+div.img2 span {
+background-color:#C0C0C0;
+padding:3px;
+box-shadow:2px 2px 2px gray,
+-1px -1px 2px white;
+Font-Weight: Bold;
+}
+
+div.img3 span {
+background-color:#C0C0C0;
+padding:3px;
+box-shadow:2px 2px 2px gray,
+-1px -1px 2px white;
+Font-Weight: Bold;
+}
+
+div.img1 img {
+    width: 150px;
+    height:150px;
+    border-radius: 10px;
+    border: 3px black solid;
+}
+
+div.img2{
+    padding-top: 20px;
+}
+
+div.img3{
+    padding-top: 20px;
+}
+
+div.img2 img {
+    width: 150px;
+    height:150px;
+    border-radius: 10px;
+    border: 3px black solid;
+}
+
+div.img3 img {
+    width: 150px;
+    height:150px;
+    border-radius: 10px;
+    border: 3px black solid;
+}
+
+div.img1 img:hover {
+    width: 300px;
+    height:300px;
+}
+
+div.img2 img:hover {
+    width: 300px;
+    height:300px;
+}
+div.img3 img:hover {
+    width: 300px;
     height:300px;
 }
